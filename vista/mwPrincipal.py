@@ -834,7 +834,7 @@ if __name__ == "__main__":
         mwPrincipal.showMaximized()
 
         # Crea el Objeto de la Ventana Emergenet
-        window = fv.mensajeCentrado("Iniciando Aplicación ...")
+        window = fv.mensajeCentrado("Iniciando Aplicación ...Espere.")
         
         #Ejecuta la Aplicación
         sys.exit(app.exec_())

@@ -428,7 +428,7 @@ class Ui_dlgSesion():
             dlgSesion.show()
 
             # Crea el Objeto de la Ventana Emergenet
-            fv.mensajeEmergente("Iniciando Sesión ... Espere")
+            fv.mensajeEmergente("Iniciando Sesión ... ")
 
             # Ejecuta el loop
             dlgSesion.exec_()
