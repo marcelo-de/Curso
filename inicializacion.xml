@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<acceso>
+ <servidor>localhost</servidor>
+ <usuario>root</usuario>
+ <password> </password>
+ <database>dbpos</database>
+ <sucursal>matriz</sucursal>
+ <terminal>1</terminal>
+</acceso>
