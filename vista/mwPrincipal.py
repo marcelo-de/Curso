@@ -28,7 +28,7 @@ import funciones.funcArchivo           as fa
 import vista.sistema.dlgParametros
 import vista.sistema.dlgEmpresa
 import vista.sistema.dlgUsuarios
-import vista.catalogos.wPrueba
+
 
 
 # Definición de la Clase Principal
