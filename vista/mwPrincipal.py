@@ -1,7 +1,7 @@
 # ----------------------------------------------------------------------
 # mwPrincipal.py
 # Ventana Principal del Sistema POS que presenta el Menu de Navegación
-# probando subirlo a github
+# probando subirlo a github quite import
 # ----------------------------------------------------------------------
 
 # Librería de Python
