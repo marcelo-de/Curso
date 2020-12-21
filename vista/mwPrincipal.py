@@ -1,7 +1,9 @@
 # ----------------------------------------------------------------------
 # mwPrincipal.py
 # Ventana Principal del Sistema POS que presenta el Menu de Navegación
+
 # se quito vista.catalogos.wPrincipal
+
 # ----------------------------------------------------------------------
 
 # Librería de Python
