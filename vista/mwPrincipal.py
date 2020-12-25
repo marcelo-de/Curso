@@ -31,7 +31,7 @@ import funciones.funcArchivo           as fa
 import vista.sistema.dlgParametros
 import vista.sistema.dlgEmpresa
 import vista.sistema.dlgUsuarios
-
+import vista.catalogos.dlgProv
 
 
 # Definición de la Clase Principal
@@ -750,65 +750,97 @@ class Ui_mwPrincipal(object):
 
 
 
- # -----------------------------------------------------------------------------------------------------------
 
-    # Función para desplegar Catálogo de Proveedores  ---------------------------------------------------------
+       # Función para desplegar Catálogo de Proveedores  ---------------------------------------------------------
     def fnCatalogoProveedores(self):
 
-        # Obtiene las dimensiones de la Ventana
-        screen = QtWidgets.QDesktopWidget().screenGeometry()
+         # Crea el objeto para el Dialogo de Empresa
+        dialog = vista.catalogos.dlgProv.Aplicacion()
+
+        # Verifico si debo registrar en la bitácora
+        if (eg.eGlobales.BitacoraActiva):
+           
+            # Registro en Bitácora
+            self.datBitacora.fnBitacoraRegistrar("Proveedores")
+
+        # Muestra el Diálogo
+        dialog.show()
+
+        #Lanza la aplicación
+        dialog.exec_()
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+ # -----------------------------------------------------------------------------------------------------------
+
+    # # Función para desplegar Catálogo de Proveedores  ---------------------------------------------------------
+    # def fnCatalogoProveedores(self):
+
+    #     # Obtiene las dimensiones de la Ventana
+    #     screen = QtWidgets.QDesktopWidget().screenGeometry()
         
-        # Forma de Proveedores
-        self.subWndProveedores = QtWidgets.QMdiSubWindow(self.centralwidget)
+    #     # Forma de Proveedores
+    #     self.subWndProveedores = QtWidgets.QMdiSubWindow(self.centralwidget)
 
-        # Establecemos titulo de la SubVentana
-        self.subWndProveedores.setWindowTitle("          -- Lista de Proveedores --")     
+    #     # Establecemos titulo de la SubVentana
+    #     self.subWndProveedores.setWindowTitle("          -- Lista de Proveedores --")     
 
-        # La barra superior
-        self.horizontalLayoutWidget = QtWidgets.QWidget(self.subWndProveedores)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(0, 0, self.centralwidget.geometry().width(), 30))
-        self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
-        self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
-        self.horizontalLayout.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
-        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        self.pushButton_4 = QtWidgets.QPushButton(self.horizontalLayoutWidget)
-        self.pushButton_4.setObjectName("pushButton_4")
-        self.horizontalLayout.addWidget(self.pushButton_4)
-        self.pushButton_3 = QtWidgets.QPushButton(self.horizontalLayoutWidget)
-        self.pushButton_3.setObjectName("pushButton_3")
-        self.horizontalLayout.addWidget(self.pushButton_3)
-        self.pushButton_2 = QtWidgets.QPushButton(self.horizontalLayoutWidget)
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.horizontalLayout.addWidget(self.pushButton_2)
-        self.pushButton = QtWidgets.QPushButton(self.horizontalLayoutWidget)
-        self.pushButton.setObjectName("pushButton")
-        self.horizontalLayout.addWidget(self.pushButton)
-        self.lineEdit = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
-        self.lineEdit.setObjectName("lineEdit")
-        self.horizontalLayout.addWidget(self.lineEdit)
-        self.pushButton_5 = QtWidgets.QPushButton(self.horizontalLayoutWidget)
-        self.pushButton_5.setObjectName("pushButton_5")
-        self.horizontalLayout.addWidget(self.pushButton_5)
-        self.pushButton_6 = QtWidgets.QPushButton(self.horizontalLayoutWidget)
-        self.pushButton_6.setObjectName("pushButton_6")
-        self.horizontalLayout.addWidget(self.pushButton_6)
+    #     # La barra superior
+    #     self.horizontalLayoutWidget = QtWidgets.QWidget(self.subWndProveedores)
+    #     self.horizontalLayoutWidget.setGeometry(QtCore.QRect(0, 0, self.centralwidget.geometry().width(), 30))
+    #     self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
+    #     self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
+    #     self.horizontalLayout.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
+    #     self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+    #     self.horizontalLayout.setObjectName("horizontalLayout")
+    #     self.pushButton_4 = QtWidgets.QPushButton(self.horizontalLayoutWidget)
+    #     self.pushButton_4.setObjectName("pushButton_4")
+    #     self.horizontalLayout.addWidget(self.pushButton_4)
+    #     self.pushButton_3 = QtWidgets.QPushButton(self.horizontalLayoutWidget)
+    #     self.pushButton_3.setObjectName("pushButton_3")
+    #     self.horizontalLayout.addWidget(self.pushButton_3)
+    #     self.pushButton_2 = QtWidgets.QPushButton(self.horizontalLayoutWidget)
+    #     self.pushButton_2.setObjectName("pushButton_2")
+    #     self.horizontalLayout.addWidget(self.pushButton_2)
+    #     self.pushButton = QtWidgets.QPushButton(self.horizontalLayoutWidget)
+    #     self.pushButton.setObjectName("pushButton")
+    #     self.horizontalLayout.addWidget(self.pushButton)
+    #     self.lineEdit = QtWidgets.QLineEdit(self.horizontalLayoutWidget)
+    #     self.lineEdit.setObjectName("lineEdit")
+    #     self.horizontalLayout.addWidget(self.lineEdit)
+    #     self.pushButton_5 = QtWidgets.QPushButton(self.horizontalLayoutWidget)
+    #     self.pushButton_5.setObjectName("pushButton_5")
+    #     self.horizontalLayout.addWidget(self.pushButton_5)
+    #     self.pushButton_6 = QtWidgets.QPushButton(self.horizontalLayoutWidget)
+    #     self.pushButton_6.setObjectName("pushButton_6")
+    #     self.horizontalLayout.addWidget(self.pushButton_6)
     
 
-        # Redimensiona la SubVentana con el ancho de la Ventana y el alto del central Widget                
-        #self.subWndProveedores.resize(screen.width(),self.centralwidget.geometry().height())
-        self.subWndProveedores.resize(self.centralwidget.geometry().width(),self.centralwidget.geometry().height())
-        #self.subWndProveedores.show()
-        self.subWndProveedores.showMaximized()
+    #     # Redimensiona la SubVentana con el ancho de la Ventana y el alto del central Widget                
+    #     #self.subWndProveedores.resize(screen.width(),self.centralwidget.geometry().height())
+    #     self.subWndProveedores.resize(self.centralwidget.geometry().width(),self.centralwidget.geometry().height())
+    #     #self.subWndProveedores.show()
+    #     self.subWndProveedores.showMaximized()
 
 
-                  # texto en  botones dentro de la ventana
-        self.pushButton_4.setText("Insertar")
-        self.pushButton_3.setText("Editar")
-        self.pushButton_2.setText("Eliminar")
-        self.pushButton.setText("Buscar")
-        self.pushButton_5.setText("Imprimir")
-        self.pushButton_6.setText("Cerrar")
+    #               # texto en  botones dentro de la ventana
+    #     self.pushButton_4.setText("Insertar")
+    #     self.pushButton_3.setText("Editar")
+    #     self.pushButton_2.setText("Eliminar")
+    #     self.pushButton.setText("Buscar")
+    #     self.pushButton_5.setText("Imprimir")
+    #     self.pushButton_6.setText("Cerrar")
         
         
 

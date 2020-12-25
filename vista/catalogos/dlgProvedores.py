@@ -41,45 +41,50 @@ import clases.claExportar                  as ce
 
 
 
-# Define la clase
-class dlgProveedores(QtWidgets.QDialog):
 
-    # Declaramos el objeto del Modelo Empresa
-    datEmpresa = mp.mProveedores()
 
-    # Variable para la ruta del Logo
-    #sLogo=""
 
-    # Construtor de la Clase
-    def __init__(self):
+
+
+# # Define la clase
+# class dlgProveedores(QtWidgets.QDialog):
+
+#     # Declaramos el objeto del Modelo Empresa
+#     datEmpresa = mp.mProveedores()
+
+#     # Variable para la ruta del Logo
+#     #sLogo=""
+
+#     # Construtor de la Clase
+#     def __init__(self):
         
-        # Llamo a super de la Clase
-        super(dlgProveedores, self).__init__()
+#         # Llamo a super de la Clase
+#         super(dlgProveedores, self).__init__()
 
-        # Coloca el Icono
-        icon = QtGui.QIcon() 
-        icon.addPixmap(QtGui.QPixmap("img/jsIco50x50.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.setWindowIcon(icon)
+#         # Coloca el Icono
+#         icon = QtGui.QIcon() 
+#         icon.addPixmap(QtGui.QPixmap("img/jsIco50x50.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+#         self.setWindowIcon(icon)
 
-        # Establezco el nombre del Objeto
-        self.setObjectName("dlgProveedores")        
+#         # Establezco el nombre del Objeto
+#         self.setObjectName("dlgProveedores")        
 
-        # Establece las dimensiones del Diálogo
-        self.resize(400, 420)
+#         # Establece las dimensiones del Diálogo
+#         self.resize(400, 420)
 
-        # Establece que es Modal
-        self.setWindowModality(QtCore.Qt.ApplicationModal)
-        self.setModal(True)
+#         # Establece que es Modal
+#         self.setWindowModality(QtCore.Qt.ApplicationModal)
+#         self.setModal(True)
 
-        # Establece el groupBox
-        self.gbProveedores = QtWidgets.QGroupBox(self)
-        self.gbProveedores.setGeometry(QtCore.QRect(10, 10, 380, 340))
-        self.gbProveedores.setObjectName("gbProveedores")
+#         # Establece el groupBox
+#         self.gbProveedores = QtWidgets.QGroupBox(self)
+#         self.gbProveedores.setGeometry(QtCore.QRect(10, 10, 380, 340))
+#         self.gbProveedores.setObjectName("gbProveedores")
 
-        # Crea un objeto de Fuente para usarlo en todos los objetos
-        font = QtGui.QFont()
-        font.setFamily("Lucida Console")
-        font.setPointSize(14)
+#         # Crea un objeto de Fuente para usarlo en todos los objetos
+#         font = QtGui.QFont()
+#         font.setFamily("Lucida Console")
+#         font.setPointSize(14)
 
         # Objetos en el diálogo
         # =========================================================
