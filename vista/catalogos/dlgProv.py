@@ -5,12 +5,14 @@
 #   ------------------------------------------------------------------------------------------------------------
     
 import sys
-from PyQt5.QtWidgets  import QApplication, QMainWindow, QPushButton, QMessageBox
+from PyQt5.QtWidgets  import QApplication, QMainWindow, QPushButton, QMessageBox, QDialog
 
 from PyQt5 import uic    # es para importar los archivos ui
     
 
-class Aplicacion(QMainWindow):
+#class Aplicacion(QMainWindow):
+class Aplicacion(QDialog):    
+
     def __init__(self):
         super().__init__()
         self.inicializarGui()
