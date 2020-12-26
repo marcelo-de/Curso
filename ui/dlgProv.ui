@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dlgProv</class>
+ <widget class="QWidget" name="dlgProv">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>978</width>
+    <height>577</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>961</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="btnInsertar">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="toolTip">
+       <string>Inserta un nueo registro</string>
+      </property>
+      <property name="text">
+       <string>INSERTAR</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../img/icon_insertar32x32.png</normaloff>../img/icon_insertar32x32.png</iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnEditar">
+      <property name="toolTip">
+       <string>Editar el registro seleccionado</string>
+      </property>
+      <property name="text">
+       <string>EDITAR</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../img/icon_editar32x32.png</normaloff>../img/icon_editar32x32.png</iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnEliminar">
+      <property name="toolTip">
+       <string>Eliminar el registro seleccionado</string>
+      </property>
+      <property name="text">
+       <string>ELIMINAR</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../img/icon_eliminar32x32.png</normaloff>../img/icon_eliminar32x32.png</iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnBuscar">
+      <property name="toolTip">
+       <string>Buscar</string>
+      </property>
+      <property name="text">
+       <string>BUSCAR</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../img/icon_editar32x32.png</normaloff>../img/icon_editar32x32.png</iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnImprimir">
+      <property name="toolTip">
+       <string>Imprimir</string>
+      </property>
+      <property name="text">
+       <string>IMPRIMIR</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../img/icon_impresora32x32.png</normaloff>../img/icon_impresora32x32.png</iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnCerrar">
+      <property name="toolTip">
+       <string>Cerrar</string>
+      </property>
+      <property name="text">
+       <string>CERRAR</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../img/icon_salida32x32.png</normaloff>../img/icon_salida32x32.png</iconset>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>49</y>
+     <width>961</width>
+     <height>521</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTableWidget" name="tblProveedores">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>789</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="dragEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <property name="showGrid">
+       <bool>true</bool>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::SolidLine</enum>
+      </property>
+      <property name="rowCount">
+       <number>5</number>
+      </property>
+      <property name="columnCount">
+       <number>12</number>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>100</number>
+      </attribute>
+      <attribute name="horizontalHeaderHighlightSections">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>39</number>
+      </attribute>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>NIF</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>NOMBRE</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>DIRECCION</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>POSTAL</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>POBLACION</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>PROVINCIA</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>PAIS</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>TELEFONO</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>MOVIL</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>EMAIL</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>WEB</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
