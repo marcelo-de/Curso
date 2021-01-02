@@ -761,7 +761,7 @@ class Ui_mwPrincipal(object):
         if (eg.eGlobales.BitacoraActiva):
            
             # Registro en Bitácora
-            self.datBitacora.fnBitacoraRegistrar("Proveedores")
+            self.datBitacora.fnBitacoraRegistrar("Proveedores desde mwPrincipal")
 
         # Muestra el Diálogo
         dialog.show()

@@ -427,7 +427,7 @@ import clases.claExportar                  as ce
     # def fnCreaItem(self,elDato):
         
     #     #Creo el Item        
-    #     item = QtWidgets.QTableWidgetItem()
+         item = QtWidgets.QTableWidgetItem()
         
     #     # Se le coloca el dato
     #     item.setText(elDato)

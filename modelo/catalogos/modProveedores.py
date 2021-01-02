@@ -249,16 +249,17 @@ if __name__ == "__main__":
     print("Proveedores Registrados:",datProveedores.fnProveedoresRegistrados())
     
     # Consultando existencia del Proveedor 0
-    print("Existe Proveedor 0:",datProveedores.fnProveedorExiste(0))
-    input("Presione para continuar ....")
+    print("Existe Proveedor 12 (ver nro en dbase): ",datProveedores.fnProveedorExiste(12))
+    input("Presione para continuar este nro de proveedor....")
+
 
     #Declaro un objeto de Proveedores y obtengo el Proveedor 0
-    oProveedor = datProveedores.fnProveedorGet(0)
+    oProveedor = datProveedores.fnProveedorGet(12)
 
-    print("Consultando Proveedor 0")
+    print("Consultando Proveedor 12")
     print("Id            :",oProveedor.getProveedor_id())
     print("Nif           :",oProveedor.getNif())
-    print("tipoIF        :",oProveedor.getTipoIF())
+    #print("tipoIF        :",oProveedor.getTipoIF())
     print("Nombre        :",oProveedor.getNombre())
     print("Dirección     :",oProveedor.getDireccion())
     print("Código Postal :",oProveedor.getCodigoPostal())
@@ -269,7 +270,7 @@ if __name__ == "__main__":
     print("Móvil         :",oProveedor.getMovil())
     print("Email         :",oProveedor.getEmail())
     print("Web           :",oProveedor.getWeb())
-    input("Presiona enter para continuar ...")
+    input("Presiona enter para ingresar uno nuevo...")
 
     # Modificamos algunos datos para insertar
     oProveedor.setNif("oerj656565")
@@ -289,7 +290,7 @@ if __name__ == "__main__":
     datProveedores.fnProveedorInsert(oProveedor)
     idInsertado = fbd.fnLastInsertId()
     print("Registro Insertado:",idInsertado)
-    input("Presione enter para Consultarlo ...")
+    input("Presione enter para Consultarlo el nuevo ingresado...")
 
     print("Consultando Proveedor Insertado :",idInsertado)
     oProveedor = datProveedores.fnProveedorGet(idInsertado)
@@ -306,7 +307,7 @@ if __name__ == "__main__":
     print("Móvil         :",oProveedor.getMovil())
     print("Email         :",oProveedor.getEmail())
     print("Web           :",oProveedor.getWeb())
-    input("Presiona enter para continuar ...")
+    input("Presiona enter para cambiarle algunos datos...")
 
     # Modificamos algunos datos para actualizar
     oProveedor.setProveedor_id(idInsertado)
@@ -341,16 +342,16 @@ if __name__ == "__main__":
     print("Móvil         :",oProveedor.getMovil())
     print("Email         :",oProveedor.getEmail())
     print("Web           :",oProveedor.getWeb())
-    input("Presiona enter para continuar ...")
+    input("Presiona enter para continuar y eliminar el prov. insertado...")
 
     # Borramos el Ciente 1
     datProveedores.fnProveedorDel(idInsertado)
     print("Proveedor Eliminado : ",idInsertado)    
-    input("Presiona para continuar ...")
+    input("Presiona para continuar y ver si ya no existe...")
 
     # Consultando existencia del Proveedor 1
     print("Existe Proveedor :"+str(idInsertado),datProveedores.fnProveedorExiste(idInsertado))
-    input("Presione para continuar ....")
+    input("Presione para continuar y ver lista ....")
     
     print("Lista de Proveedores ...")
     lstProveedores = datProveedores.fnProveedorLista()
@@ -371,5 +372,5 @@ if __name__ == "__main__":
     
     
     # Cierra la Conexión
-    print("Cerrando Conexión ...")
+    print("Finalizado, Cerrando Conexión ...")
     fbd.fnConexionCerrar()
