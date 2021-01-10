@@ -16,9 +16,9 @@ import funciones.funcGrales                as fg
 import entidades.entGlobales               as eg
 import funciones.funcBaseDatos             as fbd
 import funciones.funcVentanas              as fv
-                  
+              
 
-#import clases.claReportes                  as cr
+#import clases.claReportes                  sas cr
 #import clases.claExportar                  as ce
 
 # Constantes
@@ -65,10 +65,13 @@ class dlgProveedor(QDialog):
         self.tblProveedores.setColumnWidth(INT_COL_EMAIL,150)
         self.tblProveedores.setColumnWidth(INT_COL_WEB,150)
 
-        self.pbCerrarProveedores.clicked.connect(self.pbCerrarProveedores_click) 
-        #self.pbInsertarProveedor.clicked.connect(self.pbInsertarProveedor_click)
 
-        #print("Intentando cargar line 68")
+        # Señales a los botones
+        self.pbCerrarProveedores.clicked.connect(self.pbCerrarProveedores_click) 
+        self.pbInsertarProveedor.clicked.connect(self.pbInsertarProveedor_click)
+        
+
+       
 
 
         self.fnCargarProveedores()    
@@ -197,22 +200,24 @@ class dlgProveedor(QDialog):
     # Función para controlar boton insertar proveedores    
     def pbInsertarProveedor_click(self):
 
+        import vista.catalogos.dlgProvAC 
        
-        
         # Crea el objeto para el Dialogo de Parámetros
-        dialog = vista.catalogos.dlgProvAC.dlgProvAC("")
+        dialogAC = vista.catalogos.dlgProvAC.dlgProveedoresAC()
 
         # Muestra el Diálogo
-        dialog.show()
+        dialogAC.show()
 
         #Lanza la aplicación
-        dialog.exec_()
+        dialogAC.exec_()
 
          # Carga los Proveedores #NOTA
         self.fnCargarProveedores()
 
          # Crea el Objeto de la Ventana Emergenet
         fv.mensajeEmergente("Actualizando Proveedores ...")    
+
+        
 
     # Función para controlar boton Editar
     def pbEditarProveedor_click(self):   
@@ -236,13 +241,13 @@ class dlgProveedor(QDialog):
             idProveedor = item.text()        
 
             # Crea el objeto para el Dialogo de Parámetros
-            dialog = vista.catalogos.dlgProvAC.dlgProvAC(idProveedor)
+            dialogAC = vista.catalogos.dlgProvAC.dlgProvAC(idProveedor)
 
             # Muestra el Diálogo
-            dialog.show()
+            dialogAC.show()
 
             #Lanza la aplicación
-            dialog.exec_()
+            dialogAC.exec_()
 
             # Carga los Proveedores
             self.fnCargarProveedores()     
@@ -334,13 +339,13 @@ class dlgProveedor(QDialog):
         idProveedor = item.text()        
 
         # Crea el objeto para el Dialogo de ProvAC
-        dialog = vista.catalogos.dlgProvAC.dlgProvAC(idProveedor)
+        dialogAC = vista.catalogos.dlgProvAC.dlgProvAC(idProveedor)
 
         # Muestra el Diálogo
-        dialog.show()
+        dialogAC.show()
 
         #Lanza la aplicación
-        dialog.exec_()  
+        dialogAC.exec_()  
 
         # Carga de Nuevo los Proveedores
         self.fnCargarProveedores()

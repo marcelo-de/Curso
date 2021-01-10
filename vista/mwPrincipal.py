@@ -26,12 +26,15 @@ import modelo.catalogos.modProductos   as mprod
 import modelo.catalogos.modProveedores as mprov
 import vista.dlgMensaje                as vm
 import funciones.funcArchivo           as fa
-#import vista.catalogos.dlgProvAC
+
+
 # Dialogos a desplegar
 import vista.sistema.dlgParametros
 import vista.sistema.dlgEmpresa
 import vista.sistema.dlgUsuarios
 import vista.catalogos.dlgProv
+
+
 
 
 # Definición de la Clase Principal
