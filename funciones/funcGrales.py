@@ -10,7 +10,7 @@ from PyQt5 import QtWidgets
 import entidades.entGlobales   as eg
 
 # Definimos una función desplegar un MessageBox de Información
-def fnMensajeInformacion(sMensaje, sInformacion):
+def fnMensajeInformacion(sTitulo,sMensaje, sInformacion):
 
     # Crea un MessageBox
     msg = QtWidgets.QMessageBox()
@@ -28,6 +28,26 @@ def fnMensajeInformacion(sMensaje, sInformacion):
     msg.exec_()
     return
 
+def fnMensajeConfirmacion(sTitulo,sMensaje, sInformacion):
+
+    # Crea un MessageBox
+    msg = QtWidgets.QMessageBox()
+
+    # Establece el Icomo
+    msg.setIcon(QtWidgets.QMessageBox.Information)
+
+    # Coloca el Mensaje a Desplegar
+    msg.setText(sMensaje)
+    msg.setInformativeText(sInformacion)
+    msg.setWindowTitle(eg.eGlobales.SISTEMA)
+    msg.setStandardButtons(QtWidgets.QMessageBox.Ok| QtWidgets.QMessageBox.Cancel)
+    
+    # Ejecuta el MessageBox
+    msg.exec_()
+    return
+
+
+
 # Función main
 if __name__ == "__main__":
 
@@ -42,3 +62,6 @@ if __name__ == "__main__":
 
     # Test función de mensaje
     fnMensajeInformacion("Titulo","Mensaje","Informacion")
+    fnMensajeConfirmacion("Titulo","Mensaje","Informacion")
+
+    

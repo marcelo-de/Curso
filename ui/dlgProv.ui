@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>dlgProv</class>
  <widget class="QWidget" name="dlgProv">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +14,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Lista de Proveedores</string>
+  </property>
+  <property name="accessibleName">
+   <string/>
   </property>
   <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
@@ -24,7 +30,7 @@
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QPushButton" name="btnInsertar">
+     <widget class="QPushButton" name="pbInsertarProveedor">
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -41,7 +47,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="btnEditar">
+     <widget class="QPushButton" name="pbEditarProveedor">
       <property name="toolTip">
        <string>Editar el registro seleccionado</string>
       </property>
@@ -55,7 +61,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="btnEliminar">
+     <widget class="QPushButton" name="pbEliminarProveedor">
       <property name="toolTip">
        <string>Eliminar el registro seleccionado</string>
       </property>
@@ -72,7 +78,7 @@
      <widget class="QLineEdit" name="lineEdit"/>
     </item>
     <item>
-     <widget class="QPushButton" name="btnBuscar">
+     <widget class="QPushButton" name="pbFiltrar">
       <property name="toolTip">
        <string>Buscar</string>
       </property>
@@ -86,7 +92,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="btnImprimir">
+     <widget class="QPushButton" name="pbImprimirProveedores">
       <property name="toolTip">
        <string>Imprimir</string>
       </property>
@@ -100,7 +106,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="btnCerrar">
+     <widget class="QPushButton" name="pbCerrarProveedores">
       <property name="toolTip">
        <string>Cerrar</string>
       </property>
@@ -141,6 +147,9 @@
       </property>
       <property name="lineWidth">
        <number>0</number>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
       </property>
       <property name="dragEnabled">
        <bool>false</bool>

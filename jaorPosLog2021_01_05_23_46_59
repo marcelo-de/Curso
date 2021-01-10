@@ -1,0 +1,18 @@
+Time    :2021-01-05 23:46:59
+Modulo  :funcBaseDatos
+Funcion :fnConexionServidor
+Tipo    :Informativo
+Mensaje :Verificando archivo de Inicialización
+
+Time    :2021-01-05 23:46:59
+Modulo  :dlgSesion
+Funcion :setupUi
+Tipo    :Informativo
+Mensaje :Creando el Diálogo ...
+
+Time    :2021-01-05 23:47:22
+Modulo  :funcBaseDatos
+Funcion :fnConexionCerrar
+Tipo    :Informativo
+Mensaje :Cerrando la Conexión al Servidor
+

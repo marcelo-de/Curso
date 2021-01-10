@@ -26,7 +26,7 @@ import modelo.catalogos.modProductos   as mprod
 import modelo.catalogos.modProveedores as mprov
 import vista.dlgMensaje                as vm
 import funciones.funcArchivo           as fa
-
+#import vista.catalogos.dlgProvAC
 # Dialogos a desplegar
 import vista.sistema.dlgParametros
 import vista.sistema.dlgEmpresa
@@ -755,7 +755,7 @@ class Ui_mwPrincipal(object):
     def fnCatalogoProveedores(self):
 
          # Crea el objeto para el Dialogo de Empresa
-        dialog = vista.catalogos.dlgProv.Aplicacion()
+        dialog = vista.catalogos.dlgProv.dlgProveedor()
 
         # Verifico si debo registrar en la bitácora
         if (eg.eGlobales.BitacoraActiva):
